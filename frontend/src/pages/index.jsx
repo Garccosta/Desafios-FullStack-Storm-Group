@@ -1,18 +1,25 @@
 // pagina Home do Next.js
 
 import Head from 'next/head';
+// import 'axios';
 import { SearchBar } from '../components/SearchBar';
 import { DataTable }  from '../components/DataTable'
 import { Footer }  from '../components/Footer';
-import { Security, Person, Tune, Home, Settings,
-  PowerSettingsNew, ArrowDownward } from '@material-ui/icons';
-import { Api } from '../api/api';
+import { ApiData } from '../api/api';
+// const ApiData = require('../src/api/api.js');
 import { DrawerComponent } from '../components/Drawer';
 import { useState } from 'react';
+import { 
+  Security, 
+  Person, 
+  Tune, 
+  Home, 
+  Settings,
+  PowerSettingsNew } from '@material-ui/icons';
 
 import styles from '../styles/pages/Home.module.css';
 
-const rows =  Api();
+const rows =  ApiData();
 
 export default function HomePage(props) {
   const [openDrawer, SetOpenDrawer] = useState(false);
@@ -64,7 +71,14 @@ export default function HomePage(props) {
       </div>
     </div>
     <DrawerComponent open = { openDrawer } toogleDrawer = { toogleDrawer } />
-    <DataTable rows = { rows } margin={ 40 } />
+    <DataTable rowsData = { rows } margin={ 40 } />
+    <div className={ styles.pagination}>
+      <button disabled>Primeiro</button>
+      <button disabled>Anterior</button>
+      <button className={ styles.currentPage }>1</button>
+      <button disabled>Próximo</button>
+      <button disabled>Último</button>
+    </div>
     <Footer />
 
   </div>

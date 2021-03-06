@@ -1,10 +1,8 @@
 .container {
   font-family: Roboto;
   height: 100vh;
-  /* margin: auto 24px; */
   display: flex;
   flex-direction: column;
-  justify-content: start;
 }
 
 /*reset button styles */
@@ -109,6 +107,31 @@
   justify-content: space-evenly;
 }
 
-/* .drawerContainer {
-  padding: 0 24px;
-} */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button{
+  display: flex;
+  margin:0px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-icon);
+  padding: 14px 16px;
+  border-radius: 4px;
+  justify-content: center;
+  box-shadow: 1px 1px 6px var(--gray-icon);
+}
+
+.pagination button:disabled{
+  opacity: 0.4;
+  background: transparent;
+}
+
+.pagination > button:nth-child(3){
+  background: var(--wine);
+  color: var(--white);
+}
+
+

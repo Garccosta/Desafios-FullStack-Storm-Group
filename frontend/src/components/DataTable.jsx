@@ -1,10 +1,5 @@
 import { DataGrid } from '@material-ui/data-grid';
-
-const rows = [
-  { id: 1, col1: 'Hello', col2: 'World' },
-  { id: 2, col1: 'XGrid', col2: 'is Awesome' },
-  { id: 3, col1: 'Material-UI', col2: 'is Amazing' },
-];
+import styles from '../styles/components/DataTable.module.css';
 
 const columns = [
   { field: 'col1', headerName: 'USUÁRIO', width: 150 },
@@ -15,8 +10,8 @@ const columns = [
   { field: 'col6', headerName: 'STATUS', width: 150 },
 ];
 
-export function DataTable() {
+export function DataTable(props) {
     return (
-        <DataGrid rows={rows} columns={columns} pageSize={6} checkboxSelection />
+          <DataGrid rows={props.rows} columns={columns} pageSize={6} checkboxSelection />
     )
 }

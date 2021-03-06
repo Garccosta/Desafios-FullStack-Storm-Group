@@ -1,0 +1,119 @@
+.navDrawer button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+  
+    background: transparent;
+  }
+
+.optionsContainer button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+  
+    background: transparent;
+  }
+  
+  .navDrawer {
+    display: flex;
+    padding: 0 24px;
+    background: var(--white);
+    width: 480px;
+    height: 96px;
+    justify-content: space-between;
+    box-shadow: 0px 2px 16px #E9E9E9;
+  }
+  
+  .navDrawer > div {
+    display: flex;
+    margin: 36px 0;
+    align-items: center;
+  }
+  
+  .navDrawer > div > span {
+    margin-left: 20px;
+    font-family: Audiowide, Roboto;
+    font-weight: 400;
+    color: var(--black);
+  }
+  
+  .navDrawer > button {
+    display: flex;
+    margin: 24px 0;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 14px;
+    border-radius: 4px;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0px 2px 16px #E9E9E9;
+  }
+  
+  .drawerBody {
+    display: flex;
+    height: 100%;
+    font-family: Roboto;
+    /* margin: 0 24px; */
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .drawerMessage {
+    margin: 40px 24px 60px 24px;
+    max-width: 432px;
+    height: 38px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gray-icon);
+  }
+  
+  .drawerOptions {
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px;
+  }
+  
+  .optionsContainer{
+    display: flex;
+    padding-bottom: 26px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    box-shadow: 0px 2px 16px #E9E9E9;
+  }
+
+  .optionsContainer:last-child{
+      margin-bottom: 40px;
+  }
+  
+  .optionsContainer > div{
+    display: flex;
+    align-items: center;
+  }
+  
+  .optionsContainer span{
+    margin-left: 16px;
+    color: var(--wine);
+    font-weight: 500;
+  }
+
+  .btnAplicar {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      color: var(--wine);
+      font-size: 16px;
+      font-weight: 400;
+      padding: 24px 184px;
+      border: 1px solid var(--wine);
+      border-radius: 4px;
+      background: transparent;
+  }
+
+  .btnAplicar:disabled {
+    opacity: 0.4;
+  }

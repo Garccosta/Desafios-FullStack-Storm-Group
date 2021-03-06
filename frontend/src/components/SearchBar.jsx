@@ -1,11 +1,12 @@
 import styles from '../styles/components/SearchBar.module.css';
+import { Search } from '@material-ui/icons'
 
 export function SearchBar() {
     return(
         <div className={ styles.searchContainer }>
             <span>Pesquisar...</span>
             <input type="text" />
-            <img src="assets/search-24px.svg" alt="search icon"/>
+            <Search style={{ fontSize: 24 , color: "var(gray-icon)" }}/>
         </div>
     )
 }

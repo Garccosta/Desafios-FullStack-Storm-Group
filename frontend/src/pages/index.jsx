@@ -1,54 +1,71 @@
 // pagina Home do Next.js
 
 import Head from 'next/head';
-import styles from '../styles/pages/Home.module.css';
 import { SearchBar } from '../components/SearchBar';
 import { DataTable }  from '../components/DataTable'
-import { Security } from '@material-ui/icons/Security';
+import { Footer }  from '../components/Footer';
+import { Security, Person, Tune, Home, Settings,
+  PowerSettingsNew, ArrowDownward } from '@material-ui/icons';
+import { Api } from '../api/api';
+import { DrawerComponent } from '../components/Drawer';
+import { useState } from 'react';
 
+import styles from '../styles/pages/Home.module.css';
 
-export default function Home(props) {
+const rows =  Api();
+
+export default function HomePage(props) {
+  const [openDrawer, SetOpenDrawer] = useState(false);
+
+  const toogleDrawer = () => {
+      SetOpenDrawer(!openDrawer);
+  }
+
   return (
   <div className={styles.container}>
     <Head>
       <title>Frontend Storm Group</title>
-      <link rel="stylesheet" 
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,500&display=swap" 
+      rel="stylesheet" /> 
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     </Head>
 
     <div className={ styles.navbar }>
-
       <div className={ styles.navLeft }>
+        {/* <svg viewBox="0 0 42px 32px"></svg> */}
         <img src="assets/symbol.svg" alt="symbol icon"/>
+        {/* <div className={ styles.barLeft }></div> */}
         <div>
           <button>
-            <img src="assets/security-24px.svg" alt="security icon"/>
+            <Security style={{ fontSize: 20 , color: "var(--gray-icon)" }}/>
           </button>
           <button>
-            <img src="assets/person-24px.svg" alt="person icon"/>
+            <Person style={{ fontSize: 20 , color: "white" }} />
           </button>
         </div>
         <SearchBar />
       </div>
 
       <div className={ styles.navRight }>  
-          <button>
-            <img src="assets/tune-24px.svg" alt="tune icon"/>
+          <button onClick={ toogleDrawer }>
+            <Tune style={{ fontSize: 20 , color: "var(--gray-icon)" }}/>
           </button>
           <button>
-              <img src="assets/person-24px.svg" alt="person icon"/>
-              <span>INCLUIR USUÁRIO</span>
+            <Person style={{ fontSize: 20 , color: "white" }} />
+            <span>INCLUIR USUÁRIO</span>
           </button>
-          <div>
-            <img src="assets/home-24px.svg" alt="home icon"/>
-            <img src="assets/settings-24px.svg" alt="settings icon"/>
-            <img src="assets/power_settings_new-24px.svg" alt="power icon"/>
+          {/* <div className={ styles.dividerRight }></div> */}
+          <div className={ styles.icons }>
+            <Home />
+            <Settings />
+            <PowerSettingsNew />
           </div>
       </div>
     </div>
-    
-    <DataTable />
+    <DrawerComponent open = { openDrawer } toogleDrawer = { toogleDrawer } />
+    <DataTable rows = { rows } margin={ 40 } />
+    <Footer />
 
   </div>
 )}

@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    background: var(--black);
+    height: 47px;
+}
+
+.footerLeft {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 16px 15px;
+}
+
+.noAr {
+    display: flex;
+    color: var(--orange);
+    font-weight: 400;
+    width: 127.25px;
+    font-family: Audiowide, Roboto;
+    align-items: center;
+    /* background-image: linear-gradient(225deg, var(--orange), var(--wine)); */
+}
+
+.noAr > p {
+    margin-left: 8px;
+}
+
+.encontro {
+    display: flex;
+    color: var(--gray);
+}
+
+.encontro div {
+    display: flex;
+    margin-left: 40.75px;
+    align-items: center;
+}
+
+.encontro div > svg {
+    color: var(--gray-icon);
+}
+
+.encontro > div > p {
+    margin-left: 8px;
+}
+
+.encontro > div:first-child{
+    font-weight: 500;
+}
+.encontro > div:last-child {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.footerRight {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.footerRight > span:first-child {
+    color: var(--gray);
+    font-weight: 300;
+    font-style: italic;
+    margin-right: 12px;
+}
+
+.footerRight > span:last-child {
+    color: var(--orange);
+    font-weight: 400;
+    font-family: Audiowide, Roboto;
+    font-size: 24px;
+    margin-right: 24px;
+}
+

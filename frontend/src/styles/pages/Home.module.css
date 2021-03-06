@@ -1,7 +1,7 @@
 .container {
   font-family: Roboto;
   height: 100vh;
-  margin: 0 auto;
+  /* margin: auto 24px; */
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -35,6 +35,10 @@
   display: flex;
 }
 
+.navLeft > img {
+  size: 48px;
+}
+
 .navLeft button {
   display: flex;
   background: var(--white);
@@ -43,6 +47,18 @@
   justify-content: center;
   width: 52px;
   height: 48px;
+  box-shadow: 0px 2px 16px #E9E9E9;
+}
+.dividerRight {
+   width: 2px;
+  margin: 6px 0;
+  background: blue;
+  /* border-left: 2px solid var(--gray);
+  height: 24px;
+  width: 1;
+  margin: 0 24px;
+  left: 50%; */
+  /* position: absolute; */
 }
 
 .navLeft button:last-child {
@@ -67,6 +83,7 @@
   padding: 14px 16px;
   border-radius: 4px;
   justify-content: center;
+  box-shadow: 0px 2px 16px #E9E9E9;
 }
 
 .navRight button:first-child {
@@ -76,8 +93,22 @@
 }
 
 .navRight button:last-of-type {
+  margin-left: 8px;
   color: var(--white);
   background: var(--wine);
+  align-items: center;
 }
 
+.navRight button > span {
+  margin-left: 4px;
+}
 
+.icons {
+  display: flex;
+  color: var(--gray-icon);
+  justify-content: space-evenly;
+}
+
+/* .drawerContainer {
+  padding: 0 24px;
+} */

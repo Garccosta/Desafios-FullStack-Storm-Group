@@ -7,15 +7,13 @@
 :root{
   --white:#fff;
   --background-color: #F5F5F5;
-  --gray-line: #DCDDE0;
+  --black: #333333;
+  --gray-bar: #E9E9E9;
   --gray: #E9E9E9;
+  --light-gray: #999999;
   --gray-icon: #666666;
   --text: #333333;
-  --text-highlight: #B3B9FF;
   --title: #2E384D;
   --wine: #D83367;
   --orange: #FF8700;
-  --blue: #5965E0;
-  --blue-dark: #4953B8;
-  --blue-twitter: #2AA9E0;
 }

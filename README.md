@@ -7,7 +7,7 @@
 ```
 
 ```
-2 - Install its dependencies/modules by running "npm install" in the directory(using a CLI, like cmd);
+2 - Install its dependencies/modules by running "npm install" in the frontend directory(using a CLI, like cmd);
 ```
 ```
 3 - Finally, run "npm start" or "yarn start" to start the web server in localhost(port 3000) in your browser. 
@@ -18,3 +18,4 @@
 1 - To run the tests, use the comand "npm run test" or "yarn test"
 ```
 
+## Project preview: https://desafiosstormgroup.vercel.app/
